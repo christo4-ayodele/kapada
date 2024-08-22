@@ -57,8 +57,7 @@ export const services: { title: string; href: string; description: string }[] =
     {
       title: 'Freight Forwarding',
       href: '/services/freight-forwarding',
-      description:
-        'A modal dialog that interrupts the user with important content and expects a response.',
+      description: 'Shipment Tracking, Customs Clearance',
     },
     // {
     //   title: 'Logisitics & Supplies',
@@ -69,13 +68,12 @@ export const services: { title: string; href: string; description: string }[] =
     {
       title: 'Monogramming/Garment Manufacturing',
       href: '/services/monogramming',
-      description:
-        'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+      description: 'Lettering, Mongram Embroidery',
     },
     {
       title: 'Agricultural Services - Tractor Hiring',
       href: '/services/agricultural-services',
-      description: 'Visually or semantically separates content.',
+      description: 'Crop Farming, Fish Farming, Tractor Hiring',
     },
   ];
 

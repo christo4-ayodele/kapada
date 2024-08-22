@@ -1,5 +1,6 @@
 import ServicesHome from '@/components/shared/ServicesHome';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,39 +15,48 @@ export default function Home() {
             Solutions.
           </p>
         </div>
-        <div className="relative col-span-10 sm:col-span-6 border-2 border-lime-500 rounded-3xl  flex justify-center  gap-5">
+        <Link
+          href={'/services/freight-forwarding'}
+          className="relative col-span-10 sm:col-span-6 border-2 border-lime-500 rounded-3xl  flex justify-center  gap-5"
+        >
           <Image
             fill={true}
             alt="freight-fowarding"
             src="/assets/img/freight-forwarding-hero.png"
             className="object-cover rounded-3xl "
           />
-          <p className=" absolute sm:text-[3em] text-[2.5rem] font-extrabold text-slate-200 z-1 left-5 bottom-2 ">
+          <p className=" absolute sm:text-[3em] text-[2.5rem] font-extrabold text-slate-100 z-1 left-5 bottom-2 ">
             Freight Forwarding
           </p>
-        </div>
-        <div className="relative col-span-5 sm:col-span-3 border-2 border-lime-500 rounded-3xl  flex justify-center items-center gap-5">
+        </Link>
+        <Link
+          href={'/services/monogramming'}
+          className="relative col-span-5 sm:col-span-3 border-2 border-lime-500 rounded-3xl  flex justify-center items-center gap-5"
+        >
           <Image
             fill={true}
             alt="monogramming/garment making"
             src="/assets/img/monogram-hero.jpg"
             className="object-cover rounded-3xl"
           />
-          <p className=" absolute  max-sm:text-[1.5em] text-[1.7rem] md:text-[2.2em] lg:text-[3em] font-extrabold text-slate-200 z-1 left-2 md:left-2 bottom-2">
+          <p className=" absolute  max-sm:text-[1.5em] text-[1.7rem] md:text-[2.2em] lg:text-[3em] font-extrabold text-slate-100 z-1 left-2 md:left-2 bottom-2">
             Monogram
           </p>
-        </div>
-        <div className="relative  col-span-5  sm:col-span-3 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 ">
+        </Link>
+        <Link
+          href={'/services/agricultural-services'}
+          className="relative  col-span-5  sm:col-span-3 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 "
+        >
           <Image
             fill={true}
             alt="agric tractor-hiring"
             src="/assets/img/tractor-hiring-hero.jpg"
             className="object-cover rounded-3xl"
           />
-          <p className=" absolute font-hero-sm md:text-[2.7em] lg:text-[3em] font-extrabold text-slate-200 z-1 left-5 bottom-2  ">
+          <p className=" absolute font-hero-sm md:text-[2.7em] lg:text-[3em] font-extrabold text-slate-100 z-1 left-5 bottom-2  ">
             Tractor Hiring
           </p>
-        </div>
+        </Link>
       </section>
 
       <ServicesHome />
