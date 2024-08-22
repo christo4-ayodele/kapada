@@ -18,13 +18,13 @@ const ServicesHero = ({ heroTitle, imgUrl, heroText }: Props) => {
           className="object-cover object-[50%_75%] w-full h-[600px]"
         />
 
-        <div className="absolute top-0">
-          <div className="flex max-sm:flex-col">
-            <p className="text-4xl font-extrabold  mx-5 my-2  sm:w-[300px] text-white  ">
+        <div className="absolute max-sm:top-0 inset-10 left-1  lg:inset-32">
+          <div className="flex flex-col lg:flex-row ">
+            <p className=" max-sm:text-left max-sm:w-full  max-lg:text-center text-4xl lg:text-6xl md:w-full lg:text-left font-extrabold  sm:mx-5 sm:my-2 mb-8  max-w-[500px] text-lima-50  ">
               {heroTitle}
             </p>
 
-            <div className="m-auto p-5 bg-gradient-to-br  from-lima-600 to-lima-300  text-lima-300 w-[350px]  sm:w-[400px] h-[400px]   rounded-lg  ">
+            <div className="m-auto p-5 bg-gradient-to-br  from-lima-600 to-lima-300  text-lima-300 w-[350px]  sm:min-w-[400px] h-[400px]   rounded-lg  ">
               <p className="sm:text-[18pt] text-[15pt]  text-lima-200 font-bold  ">
                 {heroText}
               </p>

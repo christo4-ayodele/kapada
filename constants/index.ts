@@ -246,10 +246,9 @@ export const monogramImgTxtfifsm = {
 };
 
 export const agriculturalServiceHero = {
-  heroTitle:
-    'Agricultural Services - Crop Farming, Tractor Hiring, Fish Drying',
+  heroTitle: 'Agricultural Services - Crop Farming, Tractor Hiring',
   imgUrl: '/assets/img/agriculture1.jpg',
-  heroText: `Welcome to Kapada Integrated Services, your trusted partner in agricultural solutions. We specialize in comprehensive crop farming, reliable tractor hiring, and efficient fish drying services, ensuring the highest standards of quality and productivity in every aspect of agriculture.`,
+  heroText: `Welcome to Kapada Integrated Services, your trusted partner in agricultural solutions. We specialize in comprehensive crop farming, reliable tractor hiring, and fish drying services, ensuring the highest standards of quality and productivity in every aspect of agriculture.`,
 };
 
 export const agricultureTxtImgfiffif = {
