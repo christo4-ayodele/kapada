@@ -77,4 +77,14 @@
   .font-hero-sm {
     @apply text-[2rem];
   }
+
+  .formfield {
+    @apply mb-5;
+  }
+}
+
+@layer utilities {
+  .input-field {
+    @apply active:ring-offset-0 border-none;
+  }
 }

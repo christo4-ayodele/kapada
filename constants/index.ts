@@ -1,4 +1,6 @@
 import { BsQuestionCircle } from 'react-icons/bs';
+import { FaLinkedin } from 'react-icons/fa';
+import { SiMinutemailer } from 'react-icons/si';
 import { RiShip2Line } from 'react-icons/ri';
 import { RiShirtLine } from 'react-icons/ri';
 import { FaTractor } from 'react-icons/fa6';
@@ -82,7 +84,7 @@ export const servicesCard = [
     icon: BsQuestionCircle,
     title: 'About our Company',
     href: '/about',
-    text: 'Kapada Integrated Services was established in 1987, as a company we provide a diverse range of professional solutions such as freight forwarding, monogramming/garment making, agricultural services and we are registered under the law of the Federal Republic of Nigeria by Corporate Affairs Commission (CAC)',
+    text: 'Kapada Integrated Services was established in 2022, as a company we provide a diverse range of professional solutions such as freight forwarding, monogramming/garment making, agricultural services and we are registered under the law of the Federal Republic of Nigeria by Corporate Affairs Commission (CAC)',
   },
   {
     icon: RiShip2Line,
@@ -105,12 +107,12 @@ export const servicesCard = [
 ];
 
 export const socials = [
-  {
-    id: '0',
-    title: 'Discord',
-    iconUrl: '/assets/svg/socials/discord.svg',
-    url: '#',
-  },
+  // {
+  //   id: '0',
+  //   title: 'LinkedIn',
+  //   iconUrl: 'FaLinkedin',
+  //   url: '#',
+  // },
   {
     id: '1',
     title: 'Twitter',
@@ -134,6 +136,23 @@ export const socials = [
     title: 'Facebook',
     iconUrl: '/assets/svg/socials/facebook.svg',
     url: '#',
+  },
+];
+
+export const ContactSocialIcons = [
+  {
+    id: '0',
+    title: 'Email',
+    icon: SiMinutemailer,
+    url: '#',
+    description: 'Email Us',
+  },
+  {
+    id: '1',
+    title: 'LinkedIn',
+    icon: FaLinkedin,
+    url: '#',
+    description: 'Connect on LinkedIn',
   },
 ];
 

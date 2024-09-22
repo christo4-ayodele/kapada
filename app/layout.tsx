@@ -20,10 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(
-          'min-h-screen  bg-lima-100  font-sans ',
-          fontSans.variable
-        )}
+        className={cn('min-h-screen bg-lima-100', fontSans.variable)}
+        style={{ fontFamily: 'var(--font-sans)' }}
       >
         <Header />
         {children}
