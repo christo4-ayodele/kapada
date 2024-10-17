@@ -89,19 +89,19 @@ export const servicesCard = [
   {
     icon: RiShip2Line,
     title: 'Freight Forwarding',
-    href: '/freight-forwarding',
+    href: '/services/freight-forwarding',
     text: 'We provide reliable and efficient freight forwarding services, ensuring your cargo moves seamlessly across borders. Our comprehensive logistics solutions handle everything from storage to transportation, guaranteeing timely delivery and peace of mind.',
   },
   {
     icon: RiShirtLine,
     title: 'Monogramming',
-    href: '/monogram-garment',
+    href: '/services/monogramming',
     text: 'Our garment manufacturing services offer exceptional quality and precision. From design to final product, we specialize in creating beautifully crafted garments tailored to meet your specifications. Trust us for innovative solutions in the fashion and apparel industry.',
   },
   {
     icon: FaTractor,
     title: 'Agricultural Services',
-    href: '/agric-tractor',
+    href: '/services/agricultural-services',
     text: 'Enhance your farming operations with our robust agricultural services. We offer reliable tractor hiring, allowing you to access modern equipment and boost productivity. Whether for plowing, planting, or harvesting, we have the machinery to support your needs.',
   },
 ];
