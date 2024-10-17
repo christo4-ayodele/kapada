@@ -21,14 +21,14 @@ const CardHero = (props: Props) => {
             {item.text}
           </p>
 
-          <Button
+          {/* <Button
             asChild
             className="rounded-md sm:rounded-xl w-[5.5rem] sm:w-[7rem] h-[1.5rem] sm:h-[2rem] bg-transparent border-2 border-lima-700 text-black hover:text-white hover:bg-red-300 ml-3"
           >
             <Link href={item.href} className="text-[.7rem] sm:text-[.8rem] ">
               Read More...
             </Link>
-          </Button>
+          </Button> */}
         </div>
       ))}
     </div>
