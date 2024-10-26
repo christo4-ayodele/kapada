@@ -4,6 +4,8 @@ import { SiMinutemailer } from 'react-icons/si';
 import { RiShip2Line } from 'react-icons/ri';
 import { RiShirtLine } from 'react-icons/ri';
 import { FaTractor } from 'react-icons/fa6';
+import { BiInfinite } from 'react-icons/bi';
+import { GrPersonalComputer } from 'react-icons/gr';
 
 export const navigation = [
   {
@@ -84,7 +86,7 @@ export const servicesCard = [
     icon: BsQuestionCircle,
     title: 'About our Company',
     href: '/about',
-    text: 'Kapada Integrated Services was established in 2022, as a company we provide a diverse range of professional solutions such as freight forwarding, monogramming/garment making, agricultural services and we are registered under the law of the Federal Republic of Nigeria by Corporate Affairs Commission (CAC)',
+    text: 'Kapada Integrated Services was established in 2022, as a company we provide a diverse range of professional solutions such as freight forwarding, monogramming, agricultural services and we are registered under the law of the Federal Republic of Nigeria by Corporate Affairs Commission (CAC).',
   },
   {
     icon: RiShip2Line,
@@ -103,6 +105,19 @@ export const servicesCard = [
     title: 'Agricultural Services',
     href: '/services/agricultural-services',
     text: 'Enhance your farming operations with our robust agricultural services. We offer reliable tractor hiring, allowing you to access modern equipment and boost productivity. Whether for plowing, planting, or harvesting, we have the machinery to support your needs.',
+  },
+
+  {
+    icon: BiInfinite,
+    title: 'Waste Management',
+    href: '/services/waste-management',
+    text: 'Kapada Integrated Services Ltd is a leading waste management and recycling company dedicated to promoting sustainable practices and environmental stewardship. With a comprehensive approach to waste management, Kapada focuses on reducing waste generation, enhancing recycling efforts, and ensuring responsible disposal of non-recyclable materials.',
+  },
+  {
+    icon: GrPersonalComputer,
+    title: 'Software Engineering',
+    href: '/services/software-engineering',
+    text: 'At Kapada Integrated Services Ltd, we provide a full range of software engineering services tailored to meet the unique needs of our clients. Our expertise ensures the delivery of cutting-edge digital solutions that drive innovation and business success. We specialize in creating responsive, high-performance websites and applications, leveraging modern technologies like React, Next.js, and more.',
   },
 ];
 
@@ -155,6 +170,39 @@ export const ContactSocialIcons = [
     description: 'Connect on LinkedIn',
   },
 ];
+
+export const aboutUsFirst = {
+  id: '0',
+  text: 'Kapada Integrated Services Ltd is proud to be affiliated with key organizations that reflect our commitment to excellence and industry standards. We are a member of the following esteemed bodies:',
+};
+
+export const aboutUsAssociations = [
+  {
+    id: '0',
+    abbr: '(ANLCA)',
+    title: 'Association of Nigerian Licensed Customs Agents',
+    text: 'A leading association that promotes professionalism and adherence to customs regulations in Nigeria.',
+    imgUrl: '/assets/img/ancla-logo.png',
+  },
+  {
+    id: '1',
+    abbr: '(LAGRA)',
+    title: 'Lagos Recyclers Association',
+    text: ' An association dedicated to promoting sustainable recycling practices and environmental stewardship.',
+    imgUrl: '/assets/img/lagra-logo.png',
+  },
+  {
+    id: '1',
+    abbr: '(LAWMA)',
+    title: 'Lagos Waste Management Authority ',
+    text: 'The official body responsible for ensuring effective waste management and environmental cleanliness in Lagos.',
+    imgUrl: '/assets/img/lawma-logo.png',
+  },
+];
+
+export const missionStatement = {
+  text: "At Kapada Integrated Services Ltd., our mission is to provide efficient and reliable services in Freight Forwarding, Industrial Embroidery, Tractor Hiring, Waste Management, and Software Engineering. We are dedicated to meeting our clients' needs with excellence, ensuring productivity, and upholding our commitment to environmental responsibility.",
+};
 
 export const freightServices = [
   {
@@ -305,4 +353,16 @@ export const agricultureServices = [
 export const agricultureImgTxtfifsm = {
   imgUrl: '/assets/img/agriculture-expertise.jpg',
   text: `With Kapada Integrated Services, you gain the benefit of extensive experience and a commitment to excellence in agriculture. We are dedicated to enhancing your productivity and quality at every stage of your agricultural operations. By staying abreast of the latest industry advancements, we provide you with the best solutions for your farming and production needs.`,
+};
+
+export const wasteManagementServiceHero = {
+  heroTitle: 'Waste Management',
+  imgUrl: '/assets/img/waste-manage1.jpg',
+  heroText: `Welcome to Kapada Integrated Services Limited, Kapada Integrated Services Ltd is a prominent waste management company based in Lagos, Nigeria, specializing in plastic recycling. Licensed by the Lagos State Waste Management Authority (LAWMA). `,
+};
+
+export const weightManagementTxtImgfiffif = {
+  text: `Kapada focuses on reducing waste generation, enhancing recycling efforts, and ensuring responsible disposal of non-recyclable materials. 
+The company employs innovative technologies and strategies to efficiently collect, sort, and process various types of waste, transforming them into valuable resources. Kapada Integrated Services Ltd aims to minimize the ecological footprint of its operations while contributing to community awareness about the importance of recycling and sustainable waste management solutions. By partnering with businesses and local governments, Kapada actively works towards creating a cleaner, greener future for all.`,
+  imgUrl: '/assets/img/waste-manage2.jpg',
 };

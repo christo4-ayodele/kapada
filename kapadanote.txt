@@ -1,0 +1,16 @@
+home page hero section
+1.remove expert from 'expert freight'
+2. Garment manu should be ''Monogramming'
+3.Agricultural solu should be 'Agricultural Services-Tractor hiring'
+4. add 'Waste Management-Recycling'
+
+Info About Our Company
+Kapada Integrated services limited is a member of 
+1.Association of Nigerian License Customs Agents (ANLCA), 
+2.Lagos Recyclers Association (LAGRA) 
+3.Lagos Waste Management Authority (LAWMA)
+
+Info on Waste Management-Recycling
+Kapada Integrated Services Ltd is a leading waste management and recycling company dedicated to promoting sustainable practices and environmental stewardship. With a comprehensive approach to waste management, Kapada focuses on reducing waste generation, enhancing recycling efforts, and ensuring responsible disposal of non-recyclable materials. 
+
+The company employs innovative technologies and strategies to efficiently collect, sort, and process various types of waste, transforming them into valuable resources. Kapada Integrated Services Ltd aims to minimize the ecological footprint of its operations while contributing to community awareness about the importance of recycling and sustainable waste management solutions. By partnering with businesses and local governments, Kapada actively works towards creating a cleaner, greener future for all.
