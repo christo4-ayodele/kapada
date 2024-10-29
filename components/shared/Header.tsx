@@ -8,9 +8,15 @@ import { Button } from '../ui/button';
 const Header = () => {
   return (
     <header className=" w-full p-4 lg:p-6 border-b-lima-500 border-b-[2px] flex justify-between ">
-      <p className="uppercase text-3xl font-extrabold text-lima-600 w-[20%]">
+      {/* <p className="uppercase text-3xl font-extrabold text-lima-600 w-[20%]">
         kapada
-      </p>
+      </p> */}
+      <Image
+        src="/assets/img/kapada-logo.png"
+        width={250}
+        height={100}
+        alt="kapada-logo"
+      />
       <nav className="w-[80%] hidden sm:flex items-center justify-center ">
         <NavItems />
       </nav>

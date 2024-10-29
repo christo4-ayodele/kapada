@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <Link
           href={'/services/freight-forwarding'}
-          className="relative col-span-10 sm:col-span-6 border-2 border-lime-500 rounded-3xl  flex justify-center  gap-5"
+          className="relative col-span-10 sm:col-span-6 border-2 border-lime-500 rounded-3xl  flex justify-center  gap-5 transform transition-transform hover:scale-110"
         >
           <Image
             fill={true}
@@ -31,7 +31,7 @@ export default function Home() {
         </Link>
         <Link
           href={'/services/monogramming'}
-          className="relative col-span-5 sm:col-span-3 border-2 border-lime-500 rounded-3xl  flex justify-center items-center gap-5"
+          className="relative col-span-5 sm:col-span-3 border-2 border-lime-500 rounded-3xl  flex justify-center items-center gap-5 transform transition-transform hover:scale-110"
         >
           <Image
             fill={true}
@@ -45,7 +45,7 @@ export default function Home() {
         </Link>
         <Link
           href={'/services/agricultural-services'}
-          className="relative  col-span-5  sm:col-span-3 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 "
+          className="relative  col-span-5  sm:col-span-3 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 transform transition-transform hover:scale-105"
         >
           <Image
             fill={true}
@@ -59,7 +59,7 @@ export default function Home() {
         </Link>
         <Link
           href={'/services/waste-management'}
-          className="relative  col-span-5  sm:col-span-5 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 "
+          className="relative  col-span-5  sm:col-span-5 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 transform transition-transform hover:scale-110"
         >
           <Image
             fill={true}

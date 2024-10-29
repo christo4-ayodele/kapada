@@ -7,12 +7,16 @@ import {
   freightServiceHero,
   freightServices,
   freightTxtImgfiffif,
+  wasteManagementAssociations,
   wasteManagementServiceHero,
+  wasteManagementServices,
+  wasteManagementText,
   weightManagementTxtImgfiffif,
 } from '@/constants';
 
 import MailSpiral from '@/components/shared/MailSpiral';
 import SubHeadGreen from '@/components/shared/SubHeadGreen';
+import AboutUsAss from '@/components/shared/AboutUsAss';
 
 type Props = {};
 
@@ -34,12 +38,13 @@ const page = (props: Props) => {
         />
       </div>
 
-      {/*  <div className="m-5 mt-10">
+      <div className="m-5 mt-10">
         <SubHeadGreen text="Our Services:" />
 
-        <ServiceGrid freightServices={freightServices} />
+        <ServiceGrid freightServices={wasteManagementServices} />
       </div>
 
+      {/*
       <div className="mt-10">
         <SubHeadGreen text="Expertise You Can Trust" />
 
@@ -50,6 +55,13 @@ const page = (props: Props) => {
       </div>
       */}
 
+      <div>
+        <SubHeadGreen text="Assosciations" />
+        <div className="text-2xl text-center">{wasteManagementText}</div>
+        <div className="m-5">
+          <AboutUsAss aboutUsAssociation={wasteManagementAssociations} />
+        </div>
+      </div>
       <div className="p-5  max-sm:text-center">
         <SubHeadGreen text="Partner with Us" />
 

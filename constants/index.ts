@@ -275,7 +275,7 @@ export const monogramTxtImgfiffif = {
   text: `At Kapada Integrated Services, we understand the importance of detailed and beautiful embroidery. 
     Whether it's for uniforms, promotional products, or personalized gifts, our expert team is dedicated to delivering designs that stand out. We use state-of-the-art equipment and premium materials
     to ensure your monograms and embroidery are vibrant, durable, and perfectly tailored to your needs.`,
-  imgUrl: '/assets/img/monogram5.jpeg',
+  imgUrl: '/assets/img/monogram5.jpg',
 };
 
 export const monogramServices = [
@@ -363,6 +363,41 @@ export const wasteManagementServiceHero = {
 
 export const weightManagementTxtImgfiffif = {
   text: `Kapada focuses on reducing waste generation, enhancing recycling efforts, and ensuring responsible disposal of non-recyclable materials. 
-The company employs innovative technologies and strategies to efficiently collect, sort, and process various types of waste, transforming them into valuable resources. Kapada Integrated Services Ltd aims to minimize the ecological footprint of its operations while contributing to community awareness about the importance of recycling and sustainable waste management solutions. By partnering with businesses and local governments, Kapada actively works towards creating a cleaner, greener future for all.`,
+Kapada Integrated Services Ltd aims to minimize the ecological footprint of its operations while contributing to community awareness about the importance of recycling and sustainable waste management solutions. By partnering with businesses and local governments, Kapada actively works towards creating a cleaner, greener future for all.`,
   imgUrl: '/assets/img/waste-manage2.jpg',
 };
+
+export const wasteManagementServices = [
+  {
+    id: '0',
+    title: 'Plastic Collection',
+    text: 'We provide reliable plastic collection services, working with both businesses and communities to gather plastic waste efficiently. Our team ensures timely pickups, keeping your space clean and contributing to a sustainable waste management system.',
+    imgUrl: '/assets/img/plastic-recycling1.jpg',
+  },
+  {
+    id: '1',
+    title: 'Plastic Baling',
+    text: 'Once collected, plastics are sorted and baled at our facility. Baling compresses the plastics into manageable, transportable units, preparing them for recycling and reuse. This process not only reduces waste but also helps maximize recycling efficiency.',
+    imgUrl: '/assets/img/waste-manage1.jpg',
+  },
+];
+
+export const wasteManagementText =
+  'Kapada Integrated Ltd is a member of a several notable waste management organizations such as:';
+
+export const wasteManagementAssociations = [
+  {
+    id: '1',
+    abbr: '(LAGRA)',
+    title: 'Lagos Recyclers Association',
+    text: ' An association dedicated to promoting sustainable recycling practices and environmental stewardship.',
+    imgUrl: '/assets/img/lagra-logo.png',
+  },
+  {
+    id: '1',
+    abbr: '(LAWMA)',
+    title: 'Lagos Waste Management Authority ',
+    text: 'The official body responsible for ensuring effective waste management and environmental cleanliness in Lagos.',
+    imgUrl: '/assets/img/lawma-logo.png',
+  },
+];
