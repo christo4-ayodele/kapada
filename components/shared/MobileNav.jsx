@@ -13,7 +13,7 @@ const MobileNav = () => {
   return (
     <>
       <nav>
-        <Sheet>
+        <Sheet className="bg-lima-300">
           <SheetTrigger>
             <Image
               src="/assets/icons/menu.svg"

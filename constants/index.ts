@@ -79,6 +79,11 @@ export const services: { title: string; href: string; description: string }[] =
       href: '/services/agricultural-services',
       description: 'Crop Farming, Fish Farming, Tractor Hiring',
     },
+    {
+      title: 'Waste Management - Plastic Recycling',
+      href: '/services/waste-management',
+      description: 'Plastic Collection and Balling',
+    },
   ];
 
 export const servicesCard = [
@@ -159,14 +164,14 @@ export const ContactSocialIcons = [
     id: '0',
     title: 'Email',
     icon: SiMinutemailer,
-    url: '#',
+    url: 'https://mail.google.com/mail/?view=cm&fs=1&to=kapadaintegrated@gmail.com&su=Hello%20there&body=This%20is%20the%20message%20body',
     description: 'Email Us',
   },
   {
     id: '1',
     title: 'LinkedIn',
     icon: FaLinkedin,
-    url: '#',
+    url: 'https://www.linkedin.com/company/kapada-integrated-services-ltd',
     description: 'Connect on LinkedIn',
   },
 ];
@@ -289,7 +294,7 @@ export const monogramServices = [
     id: '1',
     title: 'Detailed Embroidery',
     text: 'Our embroidery services cover a wide range of applications, from corporate apparel to special event decorations. Each piece is crafted with attention to detail, ensuring high-quality and lasting impressions.',
-    imgUrl: '/assets/img/monogram-service2.jpeg',
+    imgUrl: '/assets/img/monogram-service2.jpg',
   },
   {
     id: '2',
@@ -306,7 +311,7 @@ export const monogramServices = [
 ];
 
 export const monogramImgTxtfifsm = {
-  imgUrl: '/assets/img/monogram-expertise.jpeg',
+  imgUrl: '/assets/img/monogram-expertise.jpg',
   text: `With Kapada Integrated Services, you’re partnering with professionals who are passionate about embroidery. Our commitment to quality and customer satisfaction means you receive products that not only meet but exceed your expectations. Whether for personal or business use, our monogramming and embroidery services add elegance and uniqueness to any item.`,
 };
 

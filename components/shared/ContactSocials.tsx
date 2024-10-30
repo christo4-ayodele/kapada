@@ -9,10 +9,15 @@ const ContactSocials = () => {
     <section>
       <div className="mb-8">
         {ContactSocialIcons.map((item, index) => (
-          <div key={index} className="flex underline mb-3">
+          <a
+            href={item.url}
+            target="_blank"
+            key={index}
+            className="flex underline mb-3"
+          >
             <item.icon className="text-2xl" mr-5 />{' '}
             <span className="ml-2">{item.description}</span>
-          </div>
+          </a>
         ))}
       </div>
 

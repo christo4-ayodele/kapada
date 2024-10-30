@@ -62,7 +62,6 @@ export function ContactForm() {
                   <FormLabel>First Name</FormLabel>
                   <FormControl>
                     <Input
-                      type="file"
                       placeholder="First Name"
                       className="input-field"
                       {...field}
@@ -180,6 +179,14 @@ export function ContactForm() {
                       </FormControl>
                       <FormLabel className="font-normal">
                         Agricultural Services
+                      </FormLabel>
+                    </FormItem>
+                    <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormControl>
+                        <RadioGroupItem value="agric" />
+                      </FormControl>
+                      <FormLabel className="font-normal">
+                        Waste Management
                       </FormLabel>
                     </FormItem>
                   </RadioGroup>
