@@ -34,7 +34,7 @@ const ContactSocials = () => {
         </span>
       </div>
 
-      <div className="max-w-[400px] leading-7">
+      <div className="max-w-[400px] leading-7 text-[1.5em]">
         <p className="text-[1.2em] font-semibold mb-5">Visit Us</p>
         <span className="flex underline mb-3">
           <GrLocation className="text-2xl mr-2 " />

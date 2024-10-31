@@ -1,11 +1,13 @@
 import ImgTxtfifsm from '@/components/shared/ImgTxtfifsm';
 import MailSpiral from '@/components/shared/MailSpiral';
+import SampleGallery from '@/components/shared/SampleGallery';
 import ServiceGrid from '@/components/shared/ServiceGrid';
 import ServicesHero from '@/components/shared/ServicesHero';
 import SubHeadGreen from '@/components/shared/SubHeadGreen';
 import TxtImgfiffif from '@/components/shared/TxtImgfiffif';
 import {
   monogramImgTxtfifsm,
+  monogramSamples,
   monogramServiceHero,
   monogramServices,
   monogramTxtImgfiffif,
@@ -57,6 +59,12 @@ const page = (props: Props) => {
         </p>
 
         <MailSpiral />
+      </div>
+
+      {/* Sample Images */}
+      <div className=" bg-gradient-to-br from-lima-200 from-10% via-lima-700  to-lima-200  m-5 rounded-md p-5">
+        <p className="text-center text-[3rem] font-bold text-white ">Samples</p>
+        <SampleGallery images={monogramSamples} />
       </div>
     </section>
   );

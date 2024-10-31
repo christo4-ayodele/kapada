@@ -315,6 +315,15 @@ export const monogramImgTxtfifsm = {
   text: `With Kapada Integrated Services, you’re partnering with professionals who are passionate about embroidery. Our commitment to quality and customer satisfaction means you receive products that not only meet but exceed your expectations. Whether for personal or business use, our monogramming and embroidery services add elegance and uniqueness to any item.`,
 };
 
+export const monogramSamples = [
+  '/assets/img/monogram-sample1.jpg',
+  '/assets/img/monogram-sample2.jpg',
+  '/assets/img/monogram-sample3.jpg',
+  '/assets/img/monogram-sample4.jpg',
+  '/assets/img/monogram-sample5.jpg',
+  '/assets/img/monogram-sample6.jpg',
+];
+
 export const agriculturalServiceHero = {
   heroTitle: 'Agricultural Services - Crop Farming, Tractor Hiring',
   imgUrl: '/assets/img/agriculture1.jpg',
