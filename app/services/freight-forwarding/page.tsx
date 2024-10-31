@@ -7,10 +7,12 @@ import {
   freightServiceHero,
   freightServices,
   freightTxtImgfiffif,
+  freightForwardingAssociations,
 } from '@/constants';
 
 import MailSpiral from '@/components/shared/MailSpiral';
 import SubHeadGreen from '@/components/shared/SubHeadGreen';
+import AboutUsAss from '@/components/shared/AboutUsAss';
 
 type Props = {};
 
@@ -38,7 +40,7 @@ const page = (props: Props) => {
         <ServiceGrid freightServices={freightServices} />
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 m-5">
         <SubHeadGreen text="Expertise You Can Trust" />
 
         <ImgTxtfifsm
@@ -47,7 +49,15 @@ const page = (props: Props) => {
         />
       </div>
 
-      <div className="p-5  max-sm:text-center">
+      <div className="m-5 pt-5">
+        <SubHeadGreen text="Assosciations" />
+
+        <div className="m-5">
+          <AboutUsAss aboutUsAssociation={freightForwardingAssociations} />
+        </div>
+      </div>
+
+      <div className="pt-5 m-5 max-sm:text-center">
         <SubHeadGreen text="Partner with Us" />
 
         <p className="text-center flex m-auto max-w-[600px]  max-sm:w-[full]">

@@ -392,7 +392,7 @@ export const wasteManagementText =
 
 export const wasteManagementAssociations = [
   {
-    id: '1',
+    id: '0',
     abbr: '(LAGRA)',
     title: 'Lagos Recyclers Association',
     text: ' An association dedicated to promoting sustainable recycling practices and environmental stewardship.',
@@ -404,5 +404,15 @@ export const wasteManagementAssociations = [
     title: 'Lagos Waste Management Authority ',
     text: 'The official body responsible for ensuring effective waste management and environmental cleanliness in Lagos.',
     imgUrl: '/assets/img/lawma-logo.png',
+  },
+];
+
+export const freightForwardingAssociations = [
+  {
+    id: '0',
+    abbr: '(ANCLA)',
+    title: 'Association of Nigerian Licensed Customs Agents',
+    text: 'A leading association that promotes professionalism and adherence to customs regulations in Nigeria.',
+    imgUrl: '/assets/img/ancla-logo.png',
   },
 ];

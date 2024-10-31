@@ -26,16 +26,32 @@ const ContactSocials = () => {
         <span className="flex mb-3 underline">
           <FiPhoneCall className="text-2xl mr-2 " /> +234 8022231436
         </span>
-        <span className="flex underline">
+        <span className="flex mb-3 underline">
           <FiPhoneCall className="text-2xl mr-2" /> +234 8055041818
+        </span>
+        <span className="flex underline">
+          <FiPhoneCall className="text-2xl mr-2" /> +234 8033935559
         </span>
       </div>
 
-      <div>
+      <div className="max-w-[400px] leading-7">
         <p className="text-[1.2em] font-semibold mb-5">Visit Us</p>
-        <span className="flex underline">
+        <span className="flex underline mb-3">
           <GrLocation className="text-2xl mr-2 " />
-          Lagos Island, Lagos
+          Port Operations Office: Mini Flat 3, Nnewi Building, 1 Creek Rd Apapa
+          Lagos State Nigeria.
+        </span>
+
+        <span className="flex underline mb-3">
+          <GrLocation className="text-2xl mr-2 " />
+          Recycling Mill: 64 Abiodun Obayemi St, Ikola, Ipaja, Lagos State,
+          Nigeria.
+        </span>
+
+        <span className="flex underline mb-3">
+          <GrLocation className="text-2xl mr-2 " />
+          Monogramming Office: Shop 8, Green Plaza, Command Bus-Stop, Ipaja,
+          Lagos State, Nigeria.
         </span>
       </div>
     </section>
