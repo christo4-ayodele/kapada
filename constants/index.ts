@@ -322,6 +322,9 @@ export const monogramSamples = [
   '/assets/img/monogram-sample4.jpg',
   '/assets/img/monogram-sample5.jpg',
   '/assets/img/monogram-sample6.jpg',
+  '/assets/img/monogram-sample7.jpg',
+  '/assets/img/monogram-sample8.jpg',
+  '/assets/img/monogram-sample9.jpg',
 ];
 
 export const agriculturalServiceHero = {
