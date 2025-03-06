@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="bg-dotted-pattern p-5 ">
       <section className="grid  grid-cols-10  grid-rows-4 sm:grid-rows-3 min-h-[400px]   gap-5 max-h-[700px] ">
-        <div className="sm:row-span-2 row-span-1 col-span-10 sm:col-span-4   border-2 border-lime-500 rounded-3xl bg-gradient-to-r from-slate-200 to-lima-200	 flex justify-center items-center p-6 ">
+        <div className="sm:row-span-2 row-span-1 col-span-10 sm:col-span-4   border-2 border-lime-500 rounded-3xl bg-linear-to-r from-slate-200 to-lima-200	 flex justify-center items-center p-6 ">
           <p className="text-[.8rem] sm:text-2xl text-lima-400 font-bold  ">
             <span className="  font-sans text-4xl lg:text-7xl font-extrabold text-lima-700">
               Kapada Integrated Services Ltd.

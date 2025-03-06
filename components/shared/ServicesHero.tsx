@@ -24,7 +24,7 @@ const ServicesHero = ({ heroTitle, imgUrl, heroText }: Props) => {
               {heroTitle}
             </p>
 
-            <div className="m-auto p-5 bg-gradient-to-br  from-lima-600 to-lima-300  text-lima-300 w-[350px]  sm:min-w-[400px] h-[400px]   rounded-lg  ">
+            <div className="m-auto p-5 bg-linear-to-br  from-lima-600 to-lima-300  text-lima-300 w-[350px]  sm:min-w-[400px] h-[400px]   rounded-lg  ">
               <p className="sm:text-[18pt] text-[15pt]  text-lima-200 font-bold  ">
                 {heroText}
               </p>

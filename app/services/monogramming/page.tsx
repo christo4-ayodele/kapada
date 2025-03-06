@@ -62,7 +62,7 @@ const page = (props: Props) => {
       </div>
 
       {/* Sample Images */}
-      <div className=" bg-gradient-to-br from-lima-200 from-10% via-lima-700  to-lima-200  m-5 rounded-md p-5">
+      <div className=" bg-linear-to-br from-lima-200 from-10% via-lima-700  to-lima-200  m-5 rounded-md p-5">
         <p className="text-center text-[3rem] font-bold text-white ">Samples</p>
         <SampleGallery images={monogramSamples} />
       </div>
