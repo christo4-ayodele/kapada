@@ -3,9 +3,9 @@ import {
   aboutUsFirst,
   servicesCard,
   missionStatement,
-} from '@/constants';
-import React from 'react';
-import AboutUsAss from '@/components/shared/AboutUsAss';
+} from "@/constants";
+import React from "react";
+import AboutUsAss from "@/components/shared/AboutUsAss";
 
 const page = () => {
   return (

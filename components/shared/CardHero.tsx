@@ -1,7 +1,7 @@
-import { servicesCard } from '@/constants';
-import Link from 'next/link';
-import React from 'react';
-import { Button } from '../ui/button';
+import { servicesCard } from "@/constants";
+import Link from "next/link";
+import React from "react";
+import { Button } from "../ui/button";
 
 type Props = {};
 

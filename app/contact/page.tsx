@@ -1,6 +1,6 @@
-import React from 'react';
-import { ContactForm } from '@/components/shared/ContactForm';
-import ContactSocials from '@/components/shared/ContactSocials';
+import React from "react";
+import { ContactForm } from "@/components/shared/ContactForm";
+import ContactSocials from "@/components/shared/ContactSocials";
 
 const page = () => {
   return (

@@ -1,6 +1,6 @@
-import ServicesHome from '@/components/shared/ServicesHome';
-import Image from 'next/image';
-import Link from 'next/link';
+import ServicesHome from "@/components/shared/ServicesHome";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,12 +10,12 @@ export default function Home() {
           <p className="text-[.8rem] sm:text-2xl text-lima-400 font-bold  ">
             <span className="  font-sans text-4xl lg:text-7xl font-extrabold text-lima-700">
               Kapada Integrated Services Ltd.
-            </span>{' '}
+            </span>{" "}
             Freight Forwarding, Monogramming, Tractor Hiring, Waste Management
           </p>
         </div>
         <Link
-          href={'/services/freight-forwarding'}
+          href={"/services/freight-forwarding"}
           className="relative col-span-10 sm:col-span-6 border-2 border-lime-500 rounded-3xl  flex justify-center  gap-5 transform transition-transform hover:scale-110"
         >
           <Image
@@ -29,7 +29,7 @@ export default function Home() {
           </p>
         </Link>
         <Link
-          href={'/services/monogramming'}
+          href={"/services/monogramming"}
           className="relative col-span-5 sm:col-span-3 border-2 border-lime-500 rounded-3xl  flex justify-center items-center gap-5 transform transition-transform hover:scale-110"
         >
           <Image
@@ -43,7 +43,7 @@ export default function Home() {
           </p>
         </Link>
         <Link
-          href={'/services/agricultural-services'}
+          href={"/services/agricultural-services"}
           className="relative  col-span-5  sm:col-span-3 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 transform transition-transform hover:scale-105"
         >
           <Image
@@ -57,7 +57,7 @@ export default function Home() {
           </p>
         </Link>
         <Link
-          href={'/services/waste-management'}
+          href={"/services/waste-management"}
           className="relative  col-span-5  sm:col-span-5 border-2 border-lime-500 rounded-3xl flex justify-center items-center gap-5 transform transition-transform hover:scale-110"
         >
           <Image

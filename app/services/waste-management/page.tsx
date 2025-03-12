@@ -1,7 +1,7 @@
-import ServiceGrid from '@/components/shared/ServiceGrid';
-import ServicesHero from '@/components/shared/ServicesHero';
-import TxtImgfiffif from '@/components/shared/TxtImgfiffif';
-import ImgTxtfifsm from '@/components/shared/ImgTxtfifsm';
+import ServiceGrid from "@/components/shared/ServiceGrid";
+import ServicesHero from "@/components/shared/ServicesHero";
+import TxtImgfiffif from "@/components/shared/TxtImgfiffif";
+import ImgTxtfifsm from "@/components/shared/ImgTxtfifsm";
 import {
   freightImgTxtfifsm,
   freightServiceHero,
@@ -12,11 +12,11 @@ import {
   wasteManagementServices,
   wasteManagementText,
   weightManagementTxtImgfiffif,
-} from '@/constants';
+} from "@/constants";
 
-import MailSpiral from '@/components/shared/MailSpiral';
-import SubHeadGreen from '@/components/shared/SubHeadGreen';
-import AboutUsAss from '@/components/shared/AboutUsAss';
+import MailSpiral from "@/components/shared/MailSpiral";
+import SubHeadGreen from "@/components/shared/SubHeadGreen";
+import AboutUsAss from "@/components/shared/AboutUsAss";
 
 type Props = {};
 

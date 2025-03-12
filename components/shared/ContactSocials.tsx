@@ -1,8 +1,8 @@
-import React from 'react';
-import { LuMailOpen } from 'react-icons/lu';
-import { FiPhoneCall } from 'react-icons/fi';
-import { GrLocation } from 'react-icons/gr';
-import { ContactSocialIcons } from '@/constants';
+import React from "react";
+import { LuMailOpen } from "react-icons/lu";
+import { FiPhoneCall } from "react-icons/fi";
+import { GrLocation } from "react-icons/gr";
+import { ContactSocialIcons } from "@/constants";
 
 const ContactSocials = () => {
   return (
@@ -15,7 +15,7 @@ const ContactSocials = () => {
             key={index}
             className="flex underline mb-3"
           >
-            <item.icon className="text-2xl" mr-5 />{' '}
+            <item.icon className="text-2xl" mr-5 />{" "}
             <span className="ml-2">{item.description}</span>
           </a>
         ))}

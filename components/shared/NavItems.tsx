@@ -1,102 +1,167 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { ROUTES } from "@/constants/routes";
+import { ChevronDown } from "lucide-react";
+import gsap from "gsap";
+import Link from "next/link";
+import React, { useRef, useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import { services } from '@/constants';
+interface NavItemsProps {
+  isMobile?: boolean;
+  closeNav?: () => void;
+}
+const NavItems = ({ isMobile, closeNav }: NavItemsProps) => {
+  const pathName = usePathname();
 
-type clsnProp = {
-  clsn?: string;
-};
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeService, setActiveService] = useState<string | null>(null);
 
-const NavItems = ({ clsn }: clsnProp) => {
+  const timeoutRef = useRef<number | null>(null); //To track the timeout
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  const handleClick = (service: string) => {
+    setActiveService(service);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      gsap.to(menuRef.current, {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        pointerEvents: "auto",
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    } else {
+      gsap.to(menuRef.current, {
+        opacity: 0,
+        scale: 0.95,
+        y: -10,
+        pointerEvents: "none",
+        duration: 0.3,
+        ease: "power2.in",
+      });
+    }
+  }, [isOpen]);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current); //Cancel any closing delay;
+    setIsOpen(true);
+  };
+  const handleMouseLeave = () => {
+    timeoutRef.current = window.setTimeout(() => {
+      setIsOpen(false);
+    }, 200);
+
+    console.log(timeoutRef.current);
+  };
   return (
-    <NavigationMenu>
-      <NavigationMenuList className={clsn}>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={` bg-inherit  ${navigationMenuTriggerStyle()}`}
+    <nav className="relative">
+      <ul
+        className={`flex items-center gap-5 ${isMobile ? "flex-col items-start!" : "flex-row"}`}
+      >
+        <li>
+          <Link href={ROUTES.HOME}>
+            <button
+              onClick={isMobile ? closeNav : undefined}
+              className={`bg-fun-green-900 text-white-50 hover:bg-white-50 hover:text-fun-green-900 rounded-sm px-3 py-2 text-sm transition`}
             >
               Home
-            </NavigationMenuLink>
+            </button>
           </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-inherit hover:text-lima-700">
-            Services
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] max-sm:w-[200px] bg-lima-100 ">
-              {services.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
+        </li>
+        <li
+          className="relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <button>
+            <p
+              className={`bg-fun-green-900 text-white-50 hover:bg-white-50 hover:text-fun-green-900 rounded-sm px-3 py-2 text-sm transition ${isOpen ? "bg-white-50! text-fun-green-900!" : ""}`}
+            >
+              <span className="flex items-center">
+                Services
+                <ChevronDown
+                  className={`ml-2 size-3 transition-transform duration-200 ${
+                    isOpen ? "-rotate-180" : "rotate-0"
+                  }`}
+                />
+              </span>
+            </p>
+          </button>
+
+          <div
+            ref={menuRef}
+            className={`bg-white-100 pointer-events-none absolute left-0 z-50 mt-2 w-52 scale-95 rounded-lg p-5 opacity-0`}
+          >
+            <ul className="flex flex-col gap-3">
+              <li>
+                <Link href={ROUTES.SERVICES("freight-forwarding")}>
+                  <button
+                    onClick={() => {
+                      if (isMobile && closeNav) closeNav(); //close the mobile view
+                    }}
+                    className={`hover:bg-fun-green-900 hover:text-white-50 rounded-lg p-2 transition ${pathName === ROUTES.SERVICES("freight-forwarding") ? "bg-fun-green-900 text-white-50" : ""} `}
+                  >
+                    Freight Forwarding
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link href={ROUTES.SERVICES("waste-management")}>
+                  <button
+                    onClick={() => {
+                      handleClick("waste-management"); //local handleClick function
+                      if (isMobile && closeNav) closeNav(); //close the mobile view
+                    }}
+                    className={`hover:bg-fun-green-900 hover:text-white-50 rounded-lg p-2 transition ${pathName === ROUTES.SERVICES("waste-management") ? "bg-fun-green-900 text-white-50" : ""} `}
+                  >
+                    Plastic Recycling
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link href={ROUTES.SERVICES("agricultural-services")}>
+                  <button
+                    onClick={() => {
+                      handleClick("agricultural-services"); //local handleClick function
+                      if (isMobile && closeNav) closeNav(); //close the mobile view
+                    }}
+                    className={`hover:bg-fun-green-900 hover:text-white-50 frounded-lg p-2 transition ${pathName === ROUTES.SERVICES("agricultural-services") ? "bg-fun-green-900 text-white-50" : ""} `}
+                  >
+                    Agriculture
+                  </button>
+                </Link>
+              </li>
             </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={` bg-inherit  ${navigationMenuTriggerStyle()}`}
+          </div>
+        </li>
+        <li>
+          <Link href={ROUTES.ABOUT}>
+            <button
+              onClick={isMobile ? closeNav : undefined}
+              className="bg-fun-green-900 text-white-50 hover:bg-white-50 hover:text-fun-green-900 rounded-sm px-3 py-2 text-sm transition"
             >
               About
-            </NavigationMenuLink>
+            </button>
           </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/contact" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={` bg-inherit  ${navigationMenuTriggerStyle()}`}
+        </li>
+        <li>
+          <Link href={ROUTES.CONTACT}>
+            <button
+              onClick={isMobile ? closeNav : undefined}
+              className="bg-fun-green-900 text-white-50 hover:bg-white-50 hover:text-fun-green-900 rounded-sm px-3 py-2 text-sm transition"
             >
               Contact
-            </NavigationMenuLink>
+            </button>
           </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+        </li>
+      </ul>
+    </nav>
   );
 };
-
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 bg-linear-to-br from-lima-400 to-lima-600 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-lima-100">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';
 
 export default NavItems;

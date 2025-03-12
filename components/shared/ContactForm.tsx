@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 import {
   Form,
@@ -12,28 +12,28 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { contactSchema } from '@/lib/validator';
-import { Button } from '../ui/button';
-import { Textarea } from '../ui/textarea';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { useState } from 'react';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { contactSchema } from "@/lib/validator";
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useState } from "react";
 
 export function ContactForm() {
   // 1. Define your form.
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      firstName: '',
-      lastName: '',
-      phoneNumber: '',
-      email: '',
-      message: '',
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+      message: "",
     },
   });
 
-  const [PhoneNumber, setPhoneNumber] = useState('');
+  const [PhoneNumber, setPhoneNumber] = useState("");
   const [valid, setValid] = useState(true);
 
   const handleChange = (event: any) => {

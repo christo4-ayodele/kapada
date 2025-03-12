@@ -1,23 +1,27 @@
-import React, { useState } from 'react';
-import NavItems from './NavItems';
-import MobileNav from './MobileNav';
-import MenuSvg from '@/public/assets/svg/MenuSvg';
-import Image from 'next/image';
-import { Button } from '../ui/button';
+import React, { useState } from "react";
+import NavItems from "./NavItems";
+import MobileNav from "./MobileNav";
+import MenuSvg from "@/public/assets/svg/MenuSvg";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { ROUTES } from "@/constants/routes";
 
 const Header = () => {
   return (
-    <header className=" w-full p-4 lg:p-6 border-b-lima-500 border-b-[2px] flex justify-between ">
-      {/* <p className="uppercase text-3xl font-extrabold text-lima-600 w-[20%]">
-        kapada
-      </p> */}
-      <Image
-        src="/assets/img/kapada-logo.png"
-        width={250}
-        height={100}
-        alt="kapada-logo"
-      />
-      <nav className="w-[80%] hidden sm:flex items-center justify-center ">
+    <header className="border-b-lima-500 bg-white-50 flex h-[100px] w-full items-center justify-between border-b-[2px] p-4 lg:p-6">
+      <div className="flex h-[50px] items-center">
+        <Link href={ROUTES.HOME}>
+          <Image
+            src="/assets/svg/kapada-logo-reup.svg"
+            width={250}
+            height={300}
+            alt="kapada-logo"
+            className=""
+          />
+        </Link>
+      </div>
+      <nav className="bg-fun-green-900 hidden max-w-3xl items-center justify-center rounded-xl px-5 py-2 max-lg:ml-4 max-md:flex-initial sm:flex">
         <NavItems />
       </nav>
 

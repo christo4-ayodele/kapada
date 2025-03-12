@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { HiOutlineMailOpen } from 'react-icons/hi';
-import { SiMinutemailer } from 'react-icons/si';
+import Link from "next/link";
+import { HiOutlineMailOpen } from "react-icons/hi";
+import { SiMinutemailer } from "react-icons/si";
 
 const MailSpiral = () => {
   return (
