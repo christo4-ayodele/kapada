@@ -9,7 +9,7 @@ import { ROUTES } from "@/constants/routes";
 
 const Header = () => {
   return (
-    <header className="border-b-lima-500 bg-white-50 flex h-[100px] w-full items-center justify-between border-b-[2px] p-4 lg:p-6">
+    <header className="bg-white-50 fixed z-50 flex h-[70px] w-full items-center justify-between p-4 shadow-2xl lg:p-6">
       <div className="flex h-[50px] items-center">
         <Link href={ROUTES.HOME}>
           <Image

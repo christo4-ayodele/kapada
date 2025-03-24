@@ -21,9 +21,9 @@ const MobileNav = () => {
 
     if (isOpen) {
       gsap.to(mobileNavRef.current, {
-        x: "0%",
-        duration: 0.4,
-        ease: "power2.out",
+        x: "0%", //another name for translateX(), no position change but when our ease in works it moves to this position
+        duration: 0.4, //how long our animation would run
+        ease: "power2.out", // the ease in lets it slide in from the right
       });
       gsap.to(overlayRef.current, {
         opacity: 1,
@@ -77,7 +77,7 @@ const MobileNav = () => {
         <div
           ref={mobileNavRef}
           className="bg-fun-green-900 absolute top-0 right-0 z-150 flex h-full w-3xs translate-x-full transform flex-col shadow-lg"
-          onClick={(e) => e.stopPropagation()} // Stops click from closing menu
+          onClick={(e) => e.stopPropagation()} // Stops parent handleclick from closing menu when on this element and limits it to the part of the nav with dark opacity visible
         >
           {/* Header */}
           <div className="bg-white-50 flex h-12 w-full items-center justify-between px-4">

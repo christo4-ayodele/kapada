@@ -99,12 +99,12 @@ export const servicesCard = [
     href: "/services/freight-forwarding",
     text: "We provide reliable and efficient freight forwarding services, ensuring your cargo moves seamlessly across borders. Our comprehensive logistics solutions handle everything from storage to transportation, guaranteeing timely delivery and peace of mind.",
   },
-  {
-    icon: RiShirtLine,
-    title: "Monogramming",
-    href: "/services/monogramming",
-    text: "Our garment manufacturing services offer exceptional quality and precision. From design to final product, we specialize in creating beautifully crafted garments tailored to meet your specifications. Trust us for innovative solutions in the fashion and apparel industry.",
-  },
+  // {
+  //   icon: RiShirtLine,
+  //   title: "Monogramming",
+  //   href: "/services/monogramming",
+  //   text: "Our garment manufacturing services offer exceptional quality and precision. From design to final product, we specialize in creating beautifully crafted garments tailored to meet your specifications. Trust us for innovative solutions in the fashion and apparel industry.",
+  // },
   {
     icon: FaTractor,
     title: "Agricultural Services",
@@ -114,16 +114,16 @@ export const servicesCard = [
 
   {
     icon: BiInfinite,
-    title: "Waste Management",
+    title: "Plastic Recycling",
     href: "/services/waste-management",
     text: "Kapada Integrated Services Ltd is a leading waste management and recycling company dedicated to promoting sustainable practices and environmental stewardship. With a comprehensive approach to waste management, Kapada focuses on reducing waste generation, enhancing recycling efforts, and ensuring responsible disposal of non-recyclable materials.",
   },
-  {
-    icon: GrPersonalComputer,
-    title: "Software Engineering",
-    href: "/services/software-engineering",
-    text: "At Kapada Integrated Services Ltd, we provide a full range of software engineering services tailored to meet the unique needs of our clients. Our expertise ensures the delivery of cutting-edge digital solutions that drive innovation and business success. We specialize in creating responsive, high-performance websites and applications, leveraging modern technologies like React, Next.js, and more.",
-  },
+  // {
+  //   icon: GrPersonalComputer,
+  //   title: "Software Engineering",
+  //   href: "/services/software-engineering",
+  //   text: "At Kapada Integrated Services Ltd, we provide a full range of software engineering services tailored to meet the unique needs of our clients. Our expertise ensures the delivery of cutting-edge digital solutions that drive innovation and business success. We specialize in creating responsive, high-performance websites and applications, leveraging modern technologies like React, Next.js, and more.",
+  // },
 ];
 
 export const socials = [

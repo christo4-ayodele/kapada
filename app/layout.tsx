@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn("min-h-screen bg-fun-green-100", fontSans.variable)}
+        className={cn("bg-fun-green-100 min-h-screen", fontSans.variable)}
         style={{ fontFamily: "var(--font-sans)" }}
       >
         <Header />
-        {children}
+        <div className="pt-20">{children}</div>
         <Footer />
       </body>
     </html>
