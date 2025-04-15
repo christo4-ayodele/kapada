@@ -4,9 +4,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className="bg-lima-950 flex h-[100px] items-center justify-between p-3 text-xl text-slate-200">
+    <section className="bg-fun-green-900 flex h-[100px] items-center justify-between p-3 text-xl text-slate-200">
       <p className="text-[10px] sm:text-xl">
-        © 2024 Kapada Integrated Services.
+        © 2025 Kapada Integrated Services Ltd.
       </p>
       <div className="flex gap-4">
         {socials.map((item) => (

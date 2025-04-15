@@ -1,11 +1,6 @@
-"use client";
-
 import ServicesHome from "@/components/shared/ServicesHome";
 import Image from "next/image";
 import Link from "next/link";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
-
 export default function Home() {
   return (
     <div className="bg-dotted-pattern p-5">
@@ -93,7 +88,9 @@ export default function Home() {
         </Link> */}
       </section>
 
-      <ServicesHome />
+      <div className="bg-fun-green-900 rounded-4xl">
+        <ServicesHome />
+      </div>
     </div>
   );
 }

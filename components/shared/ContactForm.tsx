@@ -18,7 +18,6 @@ import { contactSchema } from "@/lib/validator";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { useState } from "react";
 
 export function ContactForm() {
   // 1. Define your form.
@@ -33,37 +32,48 @@ export function ContactForm() {
     },
   });
 
-  const [PhoneNumber, setPhoneNumber] = useState("");
-  const [valid, setValid] = useState(true);
-
-  const handleChange = (event: any) => {
-    // const input = event.target.value;
-    // setPhoneNumber(input)
-    // setValid(validatePhoneNumber(input))
-  };
-
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof contactSchema>) {
+  async function onSubmit(values: z.infer<typeof contactSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      console.log("Message sent successfully", data);
+    } catch (error) {
+      console.error("Failed to send message", error);
+    }
   }
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="flex flex-col ">
-          <div className="lg:flex justify-between formfield">
+        <div className="text-fun-green-900 flex flex-col">
+          <div className="formfield justify-between lg:flex">
             <FormField
               control={form.control}
               name="firstName"
               render={({ field }) => (
-                <FormItem className=" lg:mr-10 max-lg:formfield  ">
-                  <FormLabel>First Name</FormLabel>
+                <FormItem className="max-lg:formfield lg:mr-10">
+                  <FormLabel className="font-bold tracking-wider">
+                    First Name
+                  </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="First Name"
-                      className="input-field"
+                      className="input-field outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                       {...field}
                     />
                   </FormControl>
@@ -77,11 +87,13 @@ export function ContactForm() {
               name="lastName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel className="font-bold tracking-wider">
+                    Last Name
+                  </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Last Name"
-                      className="input-field"
+                      className="input-field outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                       {...field}
                     ></Input>
                   </FormControl>
@@ -96,11 +108,13 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem className="formfield">
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="font-bold tracking-wider">
+                  Email
+                </FormLabel>
                 <FormControl>
                   <Input
                     placeholder="you@email.com"
-                    className="input-field"
+                    className="input-field outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                     {...field}
                   ></Input>
                 </FormControl>
@@ -114,12 +128,13 @@ export function ContactForm() {
             name="phoneNumber"
             render={({ field }) => (
               <FormItem className="formfield">
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel className="font-bold tracking-wider">
+                  Phone Number
+                </FormLabel>
                 <FormControl>
                   <Input
-                    onChangeCapture={handleChange}
                     placeholder="xxx xxx xxx"
-                    className="input-field"
+                    className="input-field outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                     {...field}
                   ></Input>
                 </FormControl>
@@ -133,11 +148,14 @@ export function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem className="formfield">
-                <FormLabel>Message</FormLabel>
+                <FormLabel className="font-bold tracking-wider">
+                  Message
+                </FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Leave us a message..."
-                    className="input-field h-[200px]"
+                    className="input-field h-[200px] outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                    {...field}
                   />
                 </FormControl>
                 <FormMessage />
@@ -150,43 +168,47 @@ export function ContactForm() {
             name="radiotype"
             render={({ field }) => (
               <FormItem className="formfield">
-                <FormLabel>Service</FormLabel>
+                <FormLabel className="font-bold tracking-wider">
+                  Service
+                </FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                     className="flex flex-col space-y-1"
                   >
-                    <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormItem className="flex items-center space-y-0 space-x-3">
                       <FormControl>
-                        <RadioGroupItem value="freight" />
+                        <RadioGroupItem
+                          value="freight"
+                          className="text-fun-green-900"
+                        />
                       </FormControl>
                       <FormLabel className="font-normal">
                         Freight-forwarding
                       </FormLabel>
                     </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
+
+                    <FormItem className="flex items-center space-y-0 space-x-3">
                       <FormControl>
-                        <RadioGroupItem value="monogram" />
-                      </FormControl>
-                      <FormLabel className="font-normal">
-                        Monogramming
-                      </FormLabel>
-                    </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
-                      <FormControl>
-                        <RadioGroupItem value="agric" />
+                        <RadioGroupItem
+                          className="text-fun-green-900"
+                          value="agric"
+                        />
                       </FormControl>
                       <FormLabel className="font-normal">
                         Agricultural Services
                       </FormLabel>
                     </FormItem>
-                    <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormItem className="flex items-center space-y-0 space-x-3">
                       <FormControl>
-                        <RadioGroupItem value="agric" />
+                        <RadioGroupItem
+                          value="plastic"
+                          className="text-fun-green-900"
+                        />
                       </FormControl>
                       <FormLabel className="font-normal">
-                        Waste Management
+                        Plastic Recycling
                       </FormLabel>
                     </FormItem>
                   </RadioGroup>
@@ -196,8 +218,12 @@ export function ContactForm() {
             )}
           />
 
-          <Button type="submit" className="formfield bg-lima-800">
-            Send Message
+          <Button
+            disabled={form.formState.isSubmitting}
+            type="submit"
+            className="formfield bg-fun-green-900 hover:bg-white-50 hover:text-sunset-orange-500 font-bold tracking-wider shadow-slate-800"
+          >
+            {form.formState.isSubmitting ? "Sending Message" : "Send Message"}
           </Button>
         </div>
       </form>

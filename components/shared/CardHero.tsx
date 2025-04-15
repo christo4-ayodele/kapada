@@ -7,28 +7,30 @@ type Props = {};
 
 const CardHero = (props: Props) => {
   return (
-    <div className="flex flex-wrap ">
+    <div className="flex flex-wrap justify-center">
       {servicesCard.map((item, index) => (
         <div
-          className="m-2 w-[400px] h-[310px] sm:h-[330px] border-2 border-lima-400 p-3  bg-slate-100"
+          className="border-lima-400 m-2 h-[310px] w-[400px] border-2 p-3 backdrop-blur-2xl sm:h-[330px]"
           key={index}
         >
-          <div className="flex justify-between pl-4 ">
-            <p className=" text-[20px] sm:text-2xl font-bold ">{item.title}</p>
-            <item.icon className="text-3xl  sm:text-4xl  " />
+          <div className="flex justify-between pl-4">
+            <p className="text-white-50 text-[20px] font-bold sm:text-2xl">
+              {item.title}
+            </p>
+            <item.icon className="text-white-50 text-3xl sm:text-4xl" />
           </div>
-          <p className="h-[220px] p-4 max-sm:pt-1 text-[13px] sm:text-[15px] font-semibold text-left leading-6 sm:mb-2 ">
+          <p className="text-fun-green-200 h-[220px] p-4 text-left text-[13px] leading-6 font-semibold max-sm:pt-1 sm:mb-2 sm:text-[15px]">
             {item.text}
           </p>
 
-          {/* <Button
+          <Button
             asChild
-            className="rounded-md sm:rounded-xl w-[5.5rem] sm:w-[7rem] h-[1.5rem] sm:h-[2rem] bg-transparent border-2 border-lima-700 text-black hover:text-white hover:bg-red-300 ml-3"
+            className="text-white-50 ml-3 h-[1.5rem] w-[5.5rem] rounded-md bg-transparent hover:bg-transparent hover:text-white sm:h-[2rem] sm:w-[7rem] sm:rounded-xl"
           >
-            <Link href={item.href} className="text-[.7rem] sm:text-[.8rem] ">
-              Read More...
+            <Link href={item.href} className="text-[.7rem] sm:text-[1rem]">
+              Learn More...
             </Link>
-          </Button> */}
+          </Button>
         </div>
       ))}
     </div>

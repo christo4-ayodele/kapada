@@ -130,7 +130,7 @@ const NavItems = ({ isMobile, closeNav }: NavItemsProps) => {
                       handleClick("agricultural-services"); //local handleClick function
                       if (isMobile && closeNav) closeNav(); //close the mobile view
                     }}
-                    className={`hover:bg-fun-green-900 hover:text-white-50 frounded-lg p-2 transition ${pathName === ROUTES.SERVICES("agricultural-services") ? "bg-fun-green-900 text-white-50" : ""} `}
+                    className={`hover:bg-fun-green-900 hover:text-white-50 rounded-lg p-2 transition ${pathName === ROUTES.SERVICES("agricultural-services") ? "bg-fun-green-900 text-white-50" : ""} `}
                   >
                     Agriculture
                   </button>

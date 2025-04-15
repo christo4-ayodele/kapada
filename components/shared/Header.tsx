@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import NavItems from "./NavItems";
 import MobileNav from "./MobileNav";
 import MenuSvg from "@/public/assets/svg/MenuSvg";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import { ROUTES } from "@/constants/routes";
 

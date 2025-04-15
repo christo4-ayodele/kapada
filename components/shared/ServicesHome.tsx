@@ -5,11 +5,13 @@ type Props = {};
 
 const ServicesHome = (props: Props) => {
   return (
-    <section className="mt-10">
-      <p className="text-4xl text-lima-500 font-extrabold "> Services</p>{" "}
-      <p className="font-bold text-2xl text-red-300 mt-2 mb-5 ">
-        What we can do for you
-      </p>
+    <section className="mt-10 pb-5">
+      <div className="px-5 py-5 lg:px-10">
+        <p className="text-white-50 text-[2.5em] font-extrabold"> Services</p>
+        <p className="text-sunset-orange-500 mt-2 mb-5 text-2xl font-bold">
+          What we can do for you
+        </p>
+      </div>
       <CardHero />
     </section>
   );

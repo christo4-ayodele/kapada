@@ -116,7 +116,7 @@ export const servicesCard = [
     icon: BiInfinite,
     title: "Plastic Recycling",
     href: "/services/waste-management",
-    text: "Kapada Integrated Services Ltd is a leading waste management and recycling company dedicated to promoting sustainable practices and environmental stewardship. With a comprehensive approach to waste management, Kapada focuses on reducing waste generation, enhancing recycling efforts, and ensuring responsible disposal of non-recyclable materials.",
+    text: "Kapada Integrated Services Ltd is a leading waste management and recycling company dedicated to promoting sustainable practices and environmental stewardship. With a comprehensive approach to waste management, enhancing recycling efforts.",
   },
   // {
   //   icon: GrPersonalComputer,
